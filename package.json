@@ -1,6 +1,6 @@
 {
   "name": "rollup-plugin-vue-template-compiler",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "",
   "main": "dist/index.js",
   "jsnext:main": "dist/index.mjs",
@@ -22,7 +22,8 @@
     "vue-template-compiler": "^2.0.0"
   },
   "dependencies": {
-    "rollup-pluginutils": "^1.5.2"
+    "rollup-pluginutils": "^1.5.2",
+    "vue-template-es2015-compiler": "^1.5.2"
   },
   "devDependencies": {
     "buble": "^0.10.6",
