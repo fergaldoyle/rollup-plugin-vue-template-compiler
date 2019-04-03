@@ -13,6 +13,13 @@
     "url": "git+https://github.com/fergaldoyle/rollup-plugin-vue-template-compiler.git"
   },
   "author": "fergaldoyle",
+  "contributors": [
+        {
+            "name": "GerkinDev",
+            "email": "agermain@ithoughts.io",
+            "url": "https://ithoughts.io/"
+        }
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/fergaldoyle/rollup-plugin-vue-template-compiler/issues"
