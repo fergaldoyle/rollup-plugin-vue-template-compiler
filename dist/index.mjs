@@ -12,6 +12,8 @@ function string(opts) {
 	if (!opts.include) {
 		throw Error('include option should be specified');
 	}
+
+	var templateCompilerOpts = opts.compilerOpts || {};
 	
 	var filter = createFilter(opts.include, opts.exclude);
 
@@ -20,7 +22,7 @@ function string(opts) {
 
 		transform: function transform(code, id) {
 			if (filter(id)) {
-				var compiled = compiler.compile(code);
+				var compiled = compiler.compile(code, templateCompilerOpts);
 				return {
 					code: transpileVueTemplate(("module.exports={render:" + (toFunction(compiled.render)) + ",staticRenderFns:[" + (compiled.staticRenderFns.map(toFunction).join(',')) + "]}")).replace('module.exports={', 'export default {'),
 					map: { mappings: '' }
