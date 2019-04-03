@@ -15,7 +15,10 @@ export default {
   format: 'umd',
   plugins: [
     vueTemplateCompiler({
-      include: '**/*.html'
+      include: '**/*.html',
+      compilerOpts: {
+          // See https://www.npmjs.com/package/vue-template-compiler#options
+      }
     }),
     buble()
   ]
